@@ -4,11 +4,11 @@ import { Injectable } from "@nestjs/common";
 export class UserRepository{
   private user = [];
 
-  save(user) {
+  async save(user) {
     this.user.push(user);
   }
 
-  list() {
+  async list() {
     return this.user;
   }
 }
