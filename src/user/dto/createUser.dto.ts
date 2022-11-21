@@ -1,4 +1,5 @@
-import { IsString, IsEmail, IsNotEmpty, MinLength } from 'class-validator';
+import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
+import { UniqueEmail } from '../validation/unique-email.validator';
 
 export class CreateUserDTO {
 
@@ -6,6 +7,7 @@ export class CreateUserDTO {
   name: string;
 
   @IsEmail(undefined, { message: 'Email is required' })
+  @UniqueEmail({ message: 'Email already exists' })
   email: string;
 
   @MinLength(6, { message: 'Password must be at least 6 characters' })
