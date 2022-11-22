@@ -1,5 +1,5 @@
-import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
-import { UniqueEmail } from '../validation/unique-email.validator';
+import { IsEmail, IsNotEmpty, MinLength } from "class-validator";
+import { UniqueEmail } from "../validation/unique-email.validator";
 
 export class CreateUserDTO {
 
